@@ -1,0 +1,6 @@
+INDEX VERSION 1.4+C:\Users\paulo\OneDrive\Almacen-ContarReportesActualizado\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2984219158.index
+3677044483.index
+3778977769.index
+3716993485.index
+666506723.index

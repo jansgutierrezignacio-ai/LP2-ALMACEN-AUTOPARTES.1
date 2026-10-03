@@ -1,0 +1,3 @@
+INDEX VERSION 1.134
+C:\Users\paulo\OneDrive\Almacen-ContarReportesActualizado\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1946427952.index
+\InventarioAutopartes\src\main\java

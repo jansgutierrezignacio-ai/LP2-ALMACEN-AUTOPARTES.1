@@ -1,0 +1,77 @@
+package modelo;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "producto") // Ajusta el nombre de la tabla si difiere en tu MySQL
+public class Producto {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idProducto")
+    private int idProducto;
+    
+    @Column(name = "nombre", length = 100, nullable = false)
+    private String nombre;
+    
+    @Column(name = "precio", nullable = false)
+    private double precio;
+    
+    @Column(name = "stock", nullable = false)
+    private int stock;
+    
+    // Relación @ManyToOne con Proveedor
+    @ManyToOne
+    @JoinColumn(name = "idProveedor", nullable = false)
+    private Proveedor proveedor;
+    
+    public Producto() {
+    }
+
+    public int getIdProducto() {
+        return idProducto;
+    }
+
+    public void setIdProducto(int idProducto) {
+        this.idProducto = idProducto;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
+
+    public Proveedor getProveedor() {
+        return proveedor;
+    }
+
+    public void setProveedor(Proveedor proveedor) {
+        this.proveedor = proveedor;
+    }
+}
